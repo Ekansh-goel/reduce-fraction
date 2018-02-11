@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class vela {
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int num1, num2;
+		System.out.println("enter first number");
+		num1 = scn.nextInt();
+		System.out.println("enter second number");
+		num2 = scn.nextInt();
+		int sum = gcd(num1, num2);
+		System.out.println(num1 = num1 / sum);
+		System.out.println(num2 = num2 / sum);
+		scn.close();
+	}
+
+	public static int gcd(int num1, int num2) {        //euclid gcf algo 
+
+		if (num1 == 0) {
+			return num2;
+		}
+		return gcd(num2 % num1, num1);
+	}
+}
